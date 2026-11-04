@@ -1,2 +1,3 @@
 # reputational-concern-across-cultures
-Companion repo for the article "Reputational Concern Across Cultures"
+
+This repository will be updated shortly with code used for the manuscript "Reputational Concern Across Cultures". If you need access to the code immediately and it has not yet been uploaded here, please contact i.deschenaux@lse.ac.uk
