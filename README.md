@@ -17,3 +17,9 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `no-monotonic.R` is used for SI D (models without monotonicity constraint)
 
 - `plot-random-effects.R` generates the plots for SI F (Unexplained heterogeneity)
+
+- `compare-imp-noimp.R` produces S26 -- S28
+
+- `model-diagnostics.R` procduces tables S11 -- S16
+
+- `imputation-diagnostics` produces table S18
