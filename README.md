@@ -8,4 +8,6 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 
 - `mini-coef-table.R` produces Table 1
 
+- `coef-table.R` produces the full coefficient tables in SI B
+
 - `plot-coefs.R` plots figures S6 to S10
