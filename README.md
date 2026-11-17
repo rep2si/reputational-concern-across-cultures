@@ -22,4 +22,6 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 
 - `model-diagnostics.R` procduces tables S11 -- S16
 
-- `imputation-diagnostics` produces table S18
+- `imputation-diagnostics.R` produces table S18
+
+- `prior-sens.R` is used for prior sensitivity checks (S29 -- S31)
