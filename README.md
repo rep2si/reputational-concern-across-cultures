@@ -13,3 +13,5 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `plot-coefs.R` plots figures S6 to S10
 
 - `compare-pooled-sitewise.R` is used for SI C (sensitivity to partial pooling)
+
+- `no-monotonic` is used for SI D (models without monotonicity constraint)
