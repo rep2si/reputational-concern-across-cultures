@@ -7,3 +7,5 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `marginal-effects-imput.R` computes marginal effects, produces main plot and values reported in the article, and some of the supplemetary plots
 
 - `mini-coef-table.R` produces Table 1
+
+- `plot-coefs.R` plots figures S6 to S10
