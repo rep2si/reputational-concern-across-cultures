@@ -25,3 +25,7 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `imputation-diagnostics.R` produces table S18
 
 - `prior-sens.R` is used for prior sensitivity checks (S29 -- S31)
+
+- `compare-comp-drop` is used for comparing models with and without comprehension checks (S32-S33)
+
+- `comprehension-model.R` shows results for models with enhanced comprehension checks (NP and UP, S35)
