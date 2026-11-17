@@ -4,6 +4,6 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 
 - `dg-descriptives.R` generates the histograms, Ligon-Schehter style plot, table 2
 
-- `marginal-effects-imput.R` computes marginal effects, produces main plot and values reported in the article
+- `marginal-effects-imput.R` computes marginal effects, produces main plot and values reported in the article, and some of the supplemetary plots
 
 - `mini-coef-table.R` produces Table 1

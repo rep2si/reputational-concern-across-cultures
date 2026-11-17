@@ -179,9 +179,70 @@ allocations_df_simple <- allocations_df %>%
     `% Alter Cent. Top 10%` = perc_alter_rank_above_0_9
   )
 
-
 knitr::kable(
   t(allocations_df_simple)[-1,],
   col.names = t(allocations_df)[1,],
   format = "latex"
 )
+
+# S4 ---------------------------------------------------------------------------
+my_sum <- d %>%
+  mutate(
+    percGiven = percGiven / 100,
+    dist_ord = ifelse(dist >= 4, "4+", dist),
+    dist_ord = factor(dist_ord, levels = c("1", "2", "3", "4+"))
+) %>%
+  group_by(site, site_full, Condition, dist_ord) %>%
+  summarise(
+    n = n(),
+    mean = mean(percGiven, na.rm = TRUE),
+    sd = sd(percGiven, na.rm = TRUE)
+  ) %>%
+  mutate(
+    se = sd / sqrt(n),
+    ic = se * qt((1 - 0.05) / 2 + .5, n - 1)
+  ) %>%
+  filter(!is.na(dist_ord))
+
+ggplot(my_sum, aes(x = dist_ord, y = mean, ymin = mean - se, ymax = mean + se, fill = site)) +
+  geom_col() +
+  geom_errorbar(width = 0.2, color = "black", alpha = 1) +
+  #geom_text(
+  #  aes(label = n, y = 2),
+  #  size = 2) +
+  facet_grid(site_full ~ Condition) +
+  theme(
+    # axis.text.y = element_blank(),
+    # axis.ticks.y = element_blank(),
+    legend.position = "none"
+    # panel.grid.minor = element_blank(),
+    # panel.grid.major = element_blank(),
+    # panel.grid.major.y = element_line(color = "lightgrey"),
+  ) +
+  theme_classic() +
+  labs(y = "Average percentage given (with SE)", x = "Distance") +
+  scale_fill_manual(values = get_site_colours()) +
+  scale_y_continuous(labels = scales::percent)
+
+# S5 ---------------------------------------------------------------------------
+d %>%
+  # We now use four levels of distance in the models, so do the same here
+  mutate(dist_ord = ifelse(dist > 3, "4+", dist)) %>%
+  filter(!is.na(dist_ord)) %>%
+  ggplot(aes(x = percGiven, colour = dist_ord, linetype = dist_ord)) +
+  stat_ecdf(geom = "line", pad = FALSE, linewidth = 1) +
+  facet_grid(site_full ~ Condition) +
+  theme_classic() +
+  theme(
+    # axis.text.y = element_blank(),
+    # axis.ticks.y = element_blank(),
+    legend.position = "bottom",
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.major.y = element_line(color = "lightgrey"),
+  ) +
+  labs(x = "Percentage given",
+       y = "Empirical CDF",
+       colour = "Distance",
+       linetype = "Distance") +
+  scale_colour_brewer(palette = "Paired")
