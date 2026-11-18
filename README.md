@@ -33,3 +33,5 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `order-of-allocations.R` produces the exploratory plots for SI N
 
 - `unknown-recipients.R` generates table S19 for SI O
+
+- `comp-v2-v3.R` is used for SI P (comparing models with and without one participant-level random slope)
