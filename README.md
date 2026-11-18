@@ -29,3 +29,5 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `compare-comp-drop` is used for comparing models with and without comprehension checks (S32-S33)
 
 - `comprehension-model.R` shows results for models with enhanced comprehension checks (NP and UP, S35)
+
+- `order-of-allocations.R` produces the exploratory plots for SI N
