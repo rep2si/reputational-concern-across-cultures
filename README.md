@@ -35,3 +35,5 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `unknown-recipients.R` generates table S19 for SI O
 
 - `comp-v2-v3.R` is used for SI P (comparing models with and without one participant-level random slope)
+
+- `strand-models.R` is used for SI Q (STRAND models as robustness check)
