@@ -2,6 +2,14 @@
 
 This repository contains code used for the manuscript "Reputational Concern Across Cultures". Note that the data cannot be provided for reasons explained in the article, which means this code cannot be run. It is provided for review purposes only.
 
+## Fitting models
+
+Code used to fit the models is contained in the `fit-models` subdirectory. This assumes a SLURM installation. Running this code locally is prohibitively expensive from a computational perspective, except for the most trivial models---fit time is typically 4 to 5 days per model.
+
+The most important code is in the `prepare-model-XXX.R` scripts; this contains the model specifications. Reviewers may also want to look at the `fit-models-XXX.R` scripts, which specify priors. The rest of the code is simply engineered to run mulitple models in parallel on a SLURM cluster.
+
+## Outputs (tables and plots)
+
 - `dg-descriptives.R` generates the histograms, Ligon-Schehter style plot, table 2
 
 - `marginal-effects-imput.R` computes marginal effects, produces main plot and values reported in the article, and some of the supplemetary plots
