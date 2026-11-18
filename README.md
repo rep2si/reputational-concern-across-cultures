@@ -1,6 +1,8 @@
 # reputational-concern-across-cultures
 
-This repository contains code used for the manuscript "Reputational Concern Across Cultures". Note that the data cannot be provided for reasons explained in the article, which means this code cannot be run. It is provided for review purposes only.
+This repository contains code used for the manuscript "Reputational Concern Across Cultures". Note that the data cannot be provided for reasons explained in the article. The code here if provided for review purposes only.
+
+The full workflow is complex. The code here focuses on the models we fit and results we report from them. If the used to fit ERGMS to the social network data is also required (this is only used for imputation purposes), please contact the author.
 
 ## Fitting models
 
