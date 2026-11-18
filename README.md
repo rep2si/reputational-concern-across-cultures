@@ -31,3 +31,5 @@ This repository contains code used for the manuscript "Reputational Concern Acro
 - `comprehension-model.R` shows results for models with enhanced comprehension checks (NP and UP, S35)
 
 - `order-of-allocations.R` produces the exploratory plots for SI N
+
+- `unknown-recipients.R` generates table S19 for SI O
